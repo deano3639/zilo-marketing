@@ -1,0 +1,318 @@
+/* 
+  Zilo Marketing - Style
+  Design System: Minimalist, Dark Mode, Technical
+*/
+
+:root {
+  --bg-color: #000000;
+  --section-color: #121212;
+  --text-color: #ffffff;
+  --accent-cyan: #00FFFF;
+  --accent-purple: #7C3AED;
+  --font-main: 'Inter', sans-serif;
+  --container-width: 800px;
+  --spacing-unit: 1rem;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Grain Effect */
+.grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.nav-cta {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid var(--text-color);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Hero */
+#hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--bg-color);
+  background-color: var(--accent-cyan);
+  padding: 4px 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #aaaaaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subhead {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #888;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+}
+
+.btn.primary:hover {
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.btn.secondary {
+  color: #888;
+  border-bottom: 1px solid #888;
+  padding: 0 0 4px 0;
+}
+
+.btn.secondary:hover {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+/* Problem Section */
+section {
+  padding: 100px 0;
+}
+
+#problem {
+  background-color: var(--section-color);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+}
+
+.bullet-list {
+  list-style: none;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 500;
+}
+
+.bullet-list li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.bullet-list li::before {
+  content: "×";
+  color: var(--accent-purple);
+  font-size: 2rem;
+  margin-right: 15px;
+  line-height: 0;
+}
+
+/* Solution Section */
+#solution .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.feature-label {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #333;
+  position: relative;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-cyan);
+}
+
+/* Process Section */
+#process {
+  background-color: var(--section-color);
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+
+.step {
+  color: var(--text-color);
+}
+
+.arrow {
+  color: #444;
+}
+
+/* Footer */
+footer {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+footer p {
+  color: #888;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.contact-item {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 60px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

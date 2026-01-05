@@ -1,0 +1,51 @@
+Act as a senior full-stack engineer + creative director. Build a complete, production-ready, ultra-fast 1-page website for “Zilo Marketing” using ONLY static files (index.html, style.css, script.js). No frameworks, no build tools. Must be optimized for 100/100 PageSpeed.
+
+Brand:
+- Name: Zilo Marketing
+- Tagline: “Engineered for speed.”
+- Voice: blunt, technical, elite. No fluff.
+- Stance: No Wix / WordPress / templates. Custom-coded “digital engines” built in 24 hours.
+
+Design system:
+- Extreme minimalism, architectural dark mode.
+- Colors: #000000 background, #121212 sections, white text, accents in Cyber Cyan (#00FFFF) and a subtle Electric Purple glow (#7C3AED).
+- Typography: Swiss-style (Inter/Helvetica fallback). Big bold headlines, tight spacing.
+- No stock photos, no cartoon icons, no sparkles. Use only minimal geometric accents (thin lines, subtle noise).
+- Add subtle grain/noise effect via CSS only (no images).
+
+Layout (1: must be mobile-first, responsive, and clean):
+1) HERO:
+   - H1: Engineered for speed.
+   - Subhead: 100/100 PageSpeed is the baseline. Custom-coded. No templates.
+   - Primary CTA button: “Request a Free Prototype”
+   - Secondary CTA (text link): “See how it works”
+   - Include a small “100/100” badge element near the hero.
+
+2) PROBLEM (short, punchy):
+   - Title: Templates are slow.
+   - 3 bullets: “Bloat kills load time.” “Load time kills conversions.” “Slow sites leak revenue.”
+
+3) SOLUTION:
+   - Title: Zilo builds digital engines.
+   - 4 feature rows with short labels:
+     - “Custom code”
+     - “AI-assisted build speed”
+     - “Sub-1s load targets”
+     - “Mobile-first conversion flow”
+
+4) PROCESS (3 steps):
+   - Audit → Prototype → Ship (24 hours)
+
+5) CTA FOOTER:
+   - Title: Get a free speed preview.
+   - Text: “DM ‘PROTOTYPE’ on Instagram or email us.”
+   - Provide placeholders for Instagram and email (e.g., @zilo.marketing and hello@zilo.marketing).
+
+Technical requirements:
+- Use semantic HTML, accessibility (proper headings, aria labels where needed), and high contrast.
+- Optimize performance: minimal JS, no external images, no heavy libraries.
+- Use a single tiny script.js only for smooth scroll + optional button click tracking (console.log only).
+- Add meta tags: title, description, viewport, theme-color.
+- Provide clean comments at the top of each file describing what it is.
+- Output all 3 files in full: index.html, style.css, script.js.
+- Ensure everything works by just opening index.html locally and also when uploaded to Netlify via drag-and-drop folder upload.

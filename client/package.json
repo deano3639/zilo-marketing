@@ -1,0 +1,11 @@
+{
+  "name": "zilo-marketing-client",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsx script/build.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
